@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "6d616d02-4d84-4566-b44c-48801b919ee3",
+		"name": "Cloudinary Upload Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30424688"
+	},
+	"item": [
+		{
+			"name": "Single File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/C:/Users/91628/Downloads/logo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cloudinary/single",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cloudinary",
+						"single"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiple File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/C:/Users/91628/Downloads/video.mp4"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/C:/Users/91628/Downloads/send/img1.jpg",
+								"/C:/Users/91628/Downloads/send/img2.png",
+								"/C:/Users/91628/Downloads/send/img3.png"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cloudinary/multiple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cloudinary",
+						"multiple"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
